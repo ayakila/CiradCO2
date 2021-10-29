@@ -1,9 +1,9 @@
 {
-  "name": "argon-dashboard-angular",
+  "name": "CiradCO2",
   "version": "1.2.0",
   "scripts": {
     "ng": "ng",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -47,8 +47,8 @@
     "zone.js": "0.11.4"
   },
   "devDependencies": {
-    "@angular/cli": "12.1.2",
-    "@angular/compiler-cli": "12.1.2",
+    "@angular/cli": "^12.2.12",
+    "@angular/compiler-cli": "^12.1.2",
     "@angular/language-service": "12.1.2",
     "@types/jasmine": "3.8.1",
     "@types/jasminewd2": "2.0.10",
