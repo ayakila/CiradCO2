@@ -57,6 +57,9 @@ export class DashboardComponent implements OnInit {
   gotoCalculGesPage(){
     this.router.navigate(['/calcul-ges'])
   }
+  gotoMesResultats(){
+    this.router.navigate(['/mes-resultats'])
+  }
 
   // public updateOptions() {
   //   this.salesChart.data.datasets[0].data = this.data;
