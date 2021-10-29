@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -39,6 +39,7 @@
     "highcharts": "^9.3.0",
     "ngx-clipboard": "14.0.1",
     "ngx-toastr": "14.0.0",
+    "nodemon": "^2.0.14",
     "nouislider": "14.6.2",
     "path": "^0.12.7",
     "rxjs": "7.2.0",
