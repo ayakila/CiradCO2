@@ -1,0 +1,78 @@
+mat-form-field-flex{
+    background-color: transparent;
+}
+
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+    font-weight: 400 !important;
+    /* line-height: 1.5; */
+    border-radius: 0.375rem!important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    box-shadow: 0 1px 3px rgb(50 50 93 / 15%), 0 1px 0 rgb(0 0 0 / 2%) !important;
+    border: 0 !important;
+    transition: box-shadow 0.15s ease !important;
+    padding: 0 .75em 0 .75em !important;
+
+  }
+  ::ng-deep .mat-select-value{
+    color: #8898aa !important;
+  }
+  ::ng-deep .mat-form-field-underline{
+      display :none;
+  }
+//   #my-suffix {
+//     position: absolute;
+//     left: 0;
+//     top: 3px;
+//     color: #555;
+//     padding-left: 5px;
+//     font: inherit;
+//   }
+
+::ng-deep.mat-form-field{
+    display: flex !important;
+}
+.icon-transport{
+    font-size: x-large !important;
+}
+.icon-add {
+    color: rgba(0, 0, 0, 0.54);
+}
+.text-participant{
+    color: #32325d;
+    font-weight: 500;
+}
+::ng-deep .mat-standard-chip.mat-chip-with-trailing-icon{
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+}
+.icon-cancel{
+    color:red;
+}
+.form-control-alternative{
+    width: auto;
+    margin-bottom: 0 !important;
+}
+::ng-deep .mat-form-field-wrapper{
+    padding-bottom: 0px !important;
+}
+.label-nameParticipant{
+    font-weight: 500;
+}
+.bloc-impact-viso{
+    margin-bottom: 1.5rem
+}
+.bloc-deplacement{
+    flex-wrap: initial;
+    text-align: center;
+}
+
+.card-body{
+    background-color: #f1f1f1;
+}
+
+.card-header{
+    border-bottom:1px solid white !important;
+    background-color: #f1f1f1 !important;
+}
+

@@ -1,0 +1,29 @@
+polygon.fill-default{
+    fill:#afcb2a !important
+}
+// .mat-typography{
+//     background-color: transparent !important;
+//     background: url(../../../assets/img/theme/bg.png) no-repeat left top / cover !important;
+// }
+.separator-bottom svg {
+    bottom: auto;
+}
+.separator-bottom{
+    bottom:auto;
+}
+.btn-primary{
+    background-color: #76A82F;
+    border-color: transparent;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
+    color: #fff;
+    background-color: #76A82F !important;;
+    border-color: transparent !important;
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    color: #76A82F !important;
+}
+custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #76A82F !important;
+    background-color: #76A82F !important;
+}

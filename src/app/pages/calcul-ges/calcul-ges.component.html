@@ -1,0 +1,345 @@
+<div class="header pb-6 pt-4 pt-lg-6 d-flex align-items-center"
+    style="min-height: 600px; background-size: cover; background-position: center top;">
+    <!-- Mask -->
+    <span class="mask  opacity-8"></span>
+    <!-- Header container -->
+    <div class="container-fluid align-items-center">
+
+        <div class="mb-2 card bg-secondary shadow">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <h3 class="mb-0">Choisir mon mode de transport</h3>
+                    </div>
+                    <!-- <div class="col-4 text-right">
+                  <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                </div> -->
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <!-- <h6 class="heading-small text-muted mb-4">Mes informations</h6> -->
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group" style="display: flex;">
+                                    <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                        for="input-id">Départ</label>
+                                    <!-- <input type="text" id="input-id" class="form-control form-control-alternative" placeholder="idUser" value="123456"> -->
+                                    <mat-form-field class="select-depart" appearance="fill">
+                                        <!-- <mat-label>Select</mat-label> -->
+                                        <mat-select [(value)]="selectedDepart">
+                                            <mat-option value="Pradez-le-Lez">Pradez-le-Lez</mat-option>
+                                            <mat-option value="Paris">Paris</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group" style="display: flex;">
+                                    <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                        for="input-email">Arrivée</label>
+                                    <mat-form-field class="select-arrive" appearance="fill">
+                                        <!-- <mat-label>Select</mat-label> -->
+                                        <mat-select [(value)]="selectedArrive">
+                                            <mat-option value="Kourou">Kourou</mat-option>
+                                            <mat-option value="Nice">Nice</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group" style="display: flex;">
+                                    <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                        for="input-number">Nombre de voyageurs</label>
+                                    <input type="number" id="input-number" class="form-control form-control-alternative"
+                                        value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-12" style="display: flex;">
+                                <label class="col-lg-4 pl-0 form-control-label" for="input-number">Moyens de transport
+                                    proposés</label>
+
+                                <div class="col-lg-4 text-center " style="display: flex;">
+
+                                    <i class="fas fa-car icon-transport mr-1"></i>
+                                    <i class="fas fa-plus icon-add mr-1 mt-1"></i>
+
+
+                                    <i class="fas fa-plane icon-transport mr-1"></i>
+                                    <i class="fas fa-plus icon-add mr-1 mt-1"></i>
+
+
+                                    <i class="fas fa-train icon-transport mr-1"></i>
+                                    <i class="fas fa-plus icon-add mt-1"></i>
+
+                                </div>
+                                <div class="col-lg-4">
+                                    <div>
+                                        <label>
+                                            xx km
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            Xx KgCO2
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+        <div class="card mb-2 bg-secondary shadow">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <h3 class="mb-0">Choisir où organiser une réunion</h3>
+                    </div>
+                    <!-- <div class="col-4 text-right">
+                  <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                </div> -->
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <!-- <h6 class="heading-small text-muted mb-4">Mes informations</h6> -->
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group" style="display: flex;">
+                                    <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                        for="input-participant">Un participant</label>
+                                    <input type="text" id="input-participant"
+                                        class="form-control form-control-alternative" placeholder="Nom">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-start">
+                                <div class="form-group" style="display: flex;">
+                                    <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                        for="input-site">Site</label>
+                                    <mat-form-field class="select-site" appearance="fill">
+                                        <!-- <mat-label>Select</mat-label> -->
+                                        <mat-select [(value)]="selectedSite">
+                                            <mat-option value="Lavalette">Lavalette</mat-option>
+                                            <!-- <mat-option value="Nice">Nice</mat-option> -->
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div style="margin-top: auto;
+                                margin-bottom: auto;">
+                                    <i class="mb-4 ml-1 align-middle ni ni-fat-add" style="color: #2dce89;font-size: x-large;
+                                  "></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group" style="display: flex;">
+                                    <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                        for="input-group">Un groupe</label>
+                                    <input type="number" id="input-group" class="form-control form-control-alternative"
+                                        placeholder="Nombre">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-start">
+                                <div class="form-group" style="display: flex;">
+                                    <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                        for="input-site">Site</label>
+                                    <mat-form-field class="select-site" appearance="fill">
+                                        <!-- <mat-label>Select</mat-label> -->
+                                        <mat-select [(value)]="selectedSite">
+                                            <mat-option value="Lavalette">Lavalette</mat-option>
+                                            <!-- <mat-option value="Nice">Nice</mat-option> -->
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div style="margin-top: auto;
+                                margin-bottom: auto;">
+                                    <i class="mb-4 ml-1 align-middle ni ni-fat-add" style="color: #2dce89;font-size: x-large;
+                                  "></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+                <div class="col-lg-12 col-md-12 mb-4 text-center">
+                    <h3 class="display-2 text-participant">Liste des participants</h3>
+                    <mat-chip-list class="d-flex justify-content-center" #chipList aria-label="participant selection">
+                        <mat-chip *ngFor="let participant of allParticipants" [selectable]="selectable"
+                            [removable]="removable" (removed)="remove(participant)">
+                            <div style="display: grid">
+                                <span>{{participant.name}}</span> <span>{{participant.site}}</span>
+                            </div>
+                            <button matChipRemove *ngIf="removable">
+                                <mat-icon class="icon-cancel">cancel</mat-icon>
+                            </button>
+                        </mat-chip>
+                    </mat-chip-list>
+                </div>
+                <div class="row pl-lg-4">
+                    <div class="col-lg-12 d-flex justify-content-start bloc-impact-viso">
+                        <label class="form-control-label " for="input-impact">Impact Visio</label>
+                        <label class="ml-6">0.3kgCO2e par heure </label>
+                    </div>
+                    <!-- <div class="col-lg-12 d-flex justify-content-start"> -->
+                    <label class="col-lg-12 form-control-label " for="input-impact">Meilleurs options</label>
+                    <div class="col-lg-12 d-flex justify-content-around">
+                        <div style="display: grid;">
+                            <label class="label-nameParticipant">Lavalette </label>
+                            <label>9,3 kCO2e </label>
+                        </div>
+                        <div style="display: grid;">
+                            <label class="label-nameParticipant">Baillarguet </label>
+                            <label>10 kCO2e </label>
+                        </div>
+                        <div style="display: grid;">
+                            <label class="label-nameParticipant">Paris </label>
+                            <label>30 kCO2e </label>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2 bg-secondary shadow">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <h3 class="mb-0">Enregistrer mes déplacements</h3>
+                    </div>
+                    <!-- <div class="col-4 text-right">
+                  <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                </div> -->
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <!-- <h6 class="heading-small text-muted mb-4">Mes informations</h6> -->
+                    <div class="pl-lg-4">
+                        <div class="row d-flex justify-content-end">
+                            <div class="col-lg-4 ">
+                                <div class="form-group d-flex justify-content-end" style="    display: flex;">
+                                    <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                        for="input-annee">Année</label>
+                                    <input type="number" id="input-annee" class="form-control form-control-alternative"
+                                        style="width: 80px;" value="2021">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-12" style="display: grid;">
+                                <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                    for="input-deplacement">Déplacements professionels</label>
+                                <div class="row bloc-deplacement" style="text-align: center;">
+                                    <!-- <div class="col-lg-12"> -->
+                                    <label class="col-4 col-md-4">1 x Montpellier Paris A/R </label>
+                                    <div class="col-lg-4 col-md-4 d-flex justify-content-around">
+                                        <i class="fas fa-train icon-transport"></i>
+                                        <label>12000 km</label>
+                                    </div>
+                                    <div class="col-4 col-md-4" style="margin-top: auto;
+                  margin-bottom: auto;">
+                                        <i class="mb-4 align-middle ni ni-fat-add" style="color: #2dce89;font-size: x-large;
+                    "></i>
+
+
+                                        <i class="mb-4 align-middle ni ni-fat-remove"
+                                            style="color:red !important; font-size: x-large;"></i>
+
+                                        <i class="ml-1 mb-4 pt-1 align-middle fas fa-pencil-alt"
+                                            style="font-size: small;"></i>
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-md-12" style="display: grid;">
+                                <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                    for="input-deplacement">Déplacements congés expatriation</label>
+                                <div class="row bloc-deplacement" style="text-align: center;">
+                                    <!-- <div class="col-lg-12"> -->
+                                    <label class="col-4 col-md-4">2 x Kourou Paris </label>
+                                    <div class="col-lg-4 col-md-4 d-flex justify-content-around">
+                                        <i class="fas fa-plane icon-transport"></i>
+                                        <label>57000 km</label>
+                                    </div>
+                                    <div class="col-4 col-md-4" style="margin-top: auto;
+                  margin-bottom: auto;">
+                                        <i class="mb-4 align-middle ni ni-fat-add" style="color: #2dce89;font-size: x-large;
+                    "></i>
+
+
+                                        <i class="mb-4 align-middle ni ni-fat-remove"
+                                            style="color:red !important; font-size: x-large;"></i>
+
+                                        <i class="ml-1 mb-4 pt-1 align-middle fas fa-pencil-alt"
+                                            style="font-size: small;"></i>
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-12" style="display: grid;">
+                                <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                                    for="input-deplacement">Déplacements domicile - travail</label>
+                                <div class="row bloc-deplacement" style="text-align: center;">
+                                    <!-- <div class="col-lg-12"> -->
+                                    <label class="col-4 col-md-4">Pradez le lez Lavalette </label>
+                                    <div class="col-lg-4 col-md-4 d-flex justify-content-around">
+                                        <i class="fas fa-car icon-transport ml-1"></i>
+                                        <label>2100 km</label>
+                                    </div>
+                                    <div class="col-4 col-md-4" style="margin-top: auto;
+                  margin-bottom: auto;">
+                                        <i class="mb-4 align-middle ni ni-fat-add" style="color: #2dce89;font-size: x-large;
+                    "></i>
+
+
+                                        <i class="mb-4 align-middle ni ni-fat-remove"
+                                            style="color:red !important; font-size: x-large;"></i>
+
+                                        <i class="ml-1 mb-4 pt-1 align-middle fas fa-pencil-alt"
+                                            style="font-size: small;"></i>
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </form>
+                <div class="d-flex justify-content-end mt-3">
+                    <label class="mr-5" style="font-weight: 500;
+                    color: #76a82f">Pour aller plus loin</label>
+                </div>
+                <div class="d-flex justify-content-end  mr-3">
+
+                    <a class="ml-2" href="https://nosgestesclimat.fr/" style="box-shadow:none;    color: #76a82f;">
+                        <label style="color:#525f7f" class="mr-1">Mon CO2 perso: </label>
+                        <img src="../../../assets/img/theme/nosgestesclimat.png"
+                            style="max-width: 50px;max-heigth:50px"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

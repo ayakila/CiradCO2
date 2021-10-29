@@ -1,0 +1,20 @@
+.logo-appli{
+    height: 45px !important;
+}
+.mat-typography{
+    background: url(../../../assets/img/theme/bg.png) no-repeat left top / cover 
+}
+::ng-deep .btn-primary{
+    background-color: #76A82F;
+    border-color: transparent;
+}
+::ng-deep .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
+    color: #fff;
+    background-color: #76A82F !important;;
+    border-color: transparent !important;
+}
+.main-content {
+    background: url(../../../assets/img/theme/flowers.svg) no-repeat left top / cover ;
+    background-color: #e3e3e3;
+}
+

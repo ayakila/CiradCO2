@@ -1,0 +1,134 @@
+<div class="header pb-6 pt-4 pt-lg-6 d-flex align-items-center"
+  style="min-height: 600px; background-size: cover; background-position: center top;">
+  <!-- Mask -->
+  <span class="mask opacity-8"></span>
+  <!-- Header container -->
+  <div class="container-fluid align-items-center">
+    <!-- <div class="row"> -->
+    <div class="col-lg-12 col-md-12 pb-2  text-center">
+      <h1 class="display-2 title-calcul" >Calcul Ges</h1>
+      <p class="mt-0 mb-3" style=" color:#76a82f">Quelle est l'empreinte de vos déplacements professionnels?</p>
+      <div class="text-center">
+        <a href="javascript:void(0)" class="btn btn-sm btn-default float-center">Finalité</a>
+        <a href="javascript:void(0)" class="btn btn-sm btn-default float-center">FAQ</a>
+      </div>
+      <div class="m-3">
+        <img src="assets/img/theme/c022.jpg" style="max-width:100%;max-height:100%">
+      </div>
+      <!-- <a href="#!" class="btn btn-info">Edit profile</a> -->
+      <div class="text-center">
+        <a (click)="gotoCalculGesPage()" class="m-1 btn btn-sm btn-success float-center">Calcul GES déplacements /
+          réunion</a>
+        <a href="javascript:void(0)" class="m-1 btn btn-sm btn-primary float-center">Enregistrer ses déplacements</a>
+      </div>
+      <div class="text-center">
+        <a href="javascript:void(0)" class="m-1 btn btn-sm btn-info float-center">Mes résultats</a>
+        <a href="javascript:void(0)" class="m-1 btn btn-sm btn-warning float-center">Mes résultats collectifs</a>
+      </div>
+    </div>
+
+    <div class="card bg-secondary shadow">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <h3 class="mb-0">Mon profil</h3>
+          </div>
+          <!-- <div class="col-4 text-right">
+              <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+            </div> -->
+        </div>
+      </div>
+      <div class="card-body">
+        <form>
+          <h6 class="heading-small text-muted mb-4">Mes informations</h6>
+          <div class="pl-lg-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group" style="display: flex;">
+                  <label class="form-control-label mr-2 mb-0 d-flex align-items-center" for="input-id">Id
+                    Utilisateur</label>
+                  <input type="text" id="input-id" class="form-control form-control-alternative" placeholder="idUser"
+                    value="123456">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group" style="display: flex;">
+                  <label class="form-control-label mr-2 mb-0  d-flex align-items-center"
+                    for="input-email">Dpt/Unité</label>
+                  <input type="email" id="input-email" class="form-control form-control-alternative"
+                    placeholder="Dgrd - Ditam" value="Dgrd - Ditam">
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group" style="display: flex;">
+                  <label class="form-control-label mr-2 mb-0  d-flex align-items-center" for="input-first-name">Lieu
+                    d'affectation</label>
+                  <input type="text" id="input-first-name" class="form-control form-control-alternative"
+                    placeholder="Lieu d'affectation" value="France - Lavalette">
+                </div>
+              </div>
+              <div class="form-group col-lg-6 " style="display: flex;">
+                <label class="form-control-label mr-2 mb-0  d-flex align-items-center" for="input-last-name">Nature
+                  d'activité</label>
+                <mat-form-field class="select-activity" appearance="fill">
+                  <!-- <mat-label>Select</mat-label> -->
+                  <mat-select [(value)]="selectedActivity">
+                    <mat-option value="Science/Appui">Science / Appui</mat-option>
+                    <mat-option value="Science/Appui">Science</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              </div>
+               <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group" style="display: flex;">
+                    <label class="mr-2 mb-0 form-control-label  d-flex align-items-center" for="input-last-name">Temps
+                      de travail</label>
+                    <!-- <div style=" display: inline-block;
+                    position: relative;"> -->
+                    <input type="text" id="input-last-name" class="form-control form-control-alternative"
+                      placeholder="Temps de travail" value="100%">
+                    <!-- <span id="my-suffix">%</span> -->
+                    <!-- </div> -->
+                  </div>
+                </div>
+                <div class="col-lg-6" style="display: flex;">
+                  <label class="mr-2 mb-4 form-control-label  d-flex align-items-center" for="input-last-name">Mes
+                    groupes</label>
+                  <div style="display: flex;">
+
+
+                    <mat-form-field class="select-groupe" appearance="fill">
+                      <!-- <mat-label>Select</mat-label> -->
+                      <mat-select [(value)]="selected">
+                        <mat-option value="velo">Vélo</mat-option>
+                        <mat-option value="voiture">Voiture</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                    <div style="margin-top: auto;
+                  margin-bottom: auto;    display: flex;">
+                      <i class="mb-4 align-middle ni ni-fat-add" style="color: #2dce89;font-size: x-large;
+                    "></i>
+                   
+                   
+                      <i class="mb-4 align-middle ni ni-fat-remove"
+                        style="color:red !important; font-size: x-large;"></i>
+              
+                      <i class="ml-1 mb-4 pt-1 align-middle ni ni-curved-next" style="font-size: medium;"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+
+        </form>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</div>

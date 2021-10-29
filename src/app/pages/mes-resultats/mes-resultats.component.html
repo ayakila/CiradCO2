@@ -1,0 +1,79 @@
+<div class="header pb-6 pt-4 pt-lg-6 d-flex align-items-center"
+    style="min-height: 600px; background-size: cover; background-position: center top;">
+    <!-- Mask -->
+    <span class="mask  opacity-8"></span>
+    <!-- Header container -->
+    <div class="container-fluid align-items-center">
+        <div class="pl-lg-4">
+            <div class="row" class="d-flex justify-content-between">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="form-group" style="display: flex;">
+                        <label class="mr-2 mb-0 form-control-label  d-flex align-items-center" for="input-tonne">11
+                            tonnes</label>
+                        <!-- <input type="text" id="input-id" class="form-control form-control-alternative" placeholder="idUser" value="123456"> -->
+                    </div>
+                </div>
+
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="form-group" style="display: flex;">
+                        <label class="mr-2 mb-0 form-control-label  d-flex align-items-center"
+                            for="input-id">Année</label>
+                        <!-- <input type="text" id="input-id" class="form-control form-control-alternative" placeholder="idUser" value="123456"> -->
+                        <mat-form-field class="select-annee" appearance="fill">
+                            <!-- <mat-label>Select</mat-label> -->
+                            <mat-select [(value)]="selectedAnnee">
+                                <mat-option value="2021">2021</mat-option>
+                                <mat-option value="2020">2020</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+                <div>
+                    <label>Mon impact déplacements: </label>
+                    <span>6tCO2e/ETPT</span>
+                </div>
+                <div>
+                    <label>Moyenne Cirad: </label>
+                    <span>5,2tCO2e/ETPT</span>
+                </div>
+                <div>
+                    <label>Moyenne activité: </label>
+                    <span>8tCO2e/ETPT</span>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6" id="container-chart" style="height: 390px"></div>
+            <div class="col-lg-6" id="container-chart-nature-deplacement" style="height: 390px;" >
+            
+            </div>
+        </div>
+     
+        <div class="row mx-1 d-flex justify-content-center">
+            <div>
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body" (click)="gotoLinkConversion()">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase title-conversion mb-0">Convertisseur CO2 de l'Ademe</h5>
+                      <p class="mt-1 mb-0 text-muted text-sm">
+                        <span >Transformer en objets palpables, les émissions carbone de mes trajets</span>
+                      </p>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape text-white rounded-circle shadow" style="background-color:#76a82f;">
+                        <i class="fas fa-exchange-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+
+
+    </div>
+</div>
