@@ -4,75 +4,149 @@
   <span class="mask  opacity-8"></span>
   <!-- Header container -->
   <div class="container-fluid align-items-center">
-    <div class="pl-lg-4">
-      <div class="row" class="d-flex justify-content-between">
-        <div class="col-lg-6 d-flex align-items-center  d-flex justify-content-start">
-          <div class="form-group" style="display: flex;">
-            <label class="mr-2 mb-0 form-control-label  d-flex align-items-center" for="input-tonne">11
-              tonnes</label>
-            <!-- <input type="text" id="input-id" class="form-control form-control-alternative" placeholder="idUser" value="123456"> -->
+    <div class="card mb-2 bg-secondary shadow">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col-12 text-center">
+            <h3 class="mb-0">Mes résultats</h3>
           </div>
-        </div>
-
-        <div class="col-lg-6 d-flex align-items-center  d-flex justify-content-end">
-          <div class="form-group" style="display: flex;">
-            <label class="mr-2 mb-0 form-control-label  d-flex align-items-center " for="input-id">Année</label>
-            <!-- <input type="text" id="input-id" class="form-control form-control-alternative" placeholder="idUser" value="123456"> -->
-            <mat-form-field class="select-annee" appearance="fill">
-              <!-- <mat-label>Select</mat-label> -->
-              <mat-select [(value)]="selectedAnnee">
-                <mat-option value="2021">2021</mat-option>
-                <mat-option value="2020">2020</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
+          <!-- <div class="col-4 text-right">
+            <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+          </div> -->
         </div>
       </div>
-      <div>
-        <div class="col-lg-12 d-flex justify-content-end" >
-          <label>Mon impact déplacements: </label>
-          <span>6tCO2e/ETPT</span>
-        </div>
-        <div class="col-lg-12 d-flex justify-content-end">
-          <label>Moyenne Cirad: </label>
-          <span>5,2tCO2e/ETPT</span>
-        </div>
-        <div class="col-lg-12 d-flex justify-content-end">
-          <label>Moyenne activité: </label>
-          <span>8tCO2e/ETPT</span>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6" id="container-chart" style="height: 390px"></div>
-      <div class="col-lg-6" id="container-chart-nature-deplacement" style="height: 390px;">
-
-      </div>
-    </div>
-
-    <div class="row mx-1 my-4 d-flex justify-content-center">
-      <div>
-        <div class="card card-stats mb-4 mb-xl-0">
-          <div class="card-body" (click)="gotoLinkConversion()">
-            <div class="row">
-              <div class="col">
-                <h5 class="card-title text-uppercase title-conversion mb-0">Convertisseur CO2 de l'Ademe</h5>
-                <p class="mt-1 mb-0 text-muted text-sm">
-                  <span>Transformer en objets palpables, les émissions carbone de mes trajets</span>
-                </p>
+      <div class="card-body">
+        <div class="pl-lg-4">
+          <div class="row" class="d-flex justify-content-between">
+            <div class="col-lg-6 d-flex align-items-center  d-flex justify-content-start">
+              <div class="form-group" style="display: flex;">
+                <label class="mr-2 mb-0 form-control-label  d-flex align-items-center" for="input-tonne">11
+                  tonnes</label>
+                <!-- <input type="text" id="input-id" class="form-control form-control-alternative" placeholder="idUser" value="123456"> -->
               </div>
-              <div class="col-auto">
-                <div class="icon icon-shape text-white rounded-circle shadow" style="background-color:#76a82f;">
-                  <i class="fas fa-exchange-alt"></i>
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-center  d-flex justify-content-end">
+              <div class="form-group" style="display: flex;">
+                <label class="mr-2 mb-0 form-control-label  d-flex align-items-center " for="input-id">Année</label>
+                <!-- <input type="text" id="input-id" class="form-control form-control-alternative" placeholder="idUser" value="123456"> -->
+                <mat-form-field class="select-annee" appearance="fill">
+                  <!-- <mat-label>Select</mat-label> -->
+                  <mat-select [(value)]="selectedAnnee">
+                    <mat-option value="2021">2021</mat-option>
+                    <mat-option value="2020">2020</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="col-lg-12 d-flex justify-content-end">
+              <label>Mon impact déplacements: </label>
+              <span>6tCO2e/ETPT</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-end">
+              <label>Moyenne Cirad: </label>
+              <span>5,2tCO2e/ETPT</span>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-end">
+              <label>Moyenne activité: </label>
+              <span>8tCO2e/ETPT</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6" id="container-chart" style="height: 390px"></div>
+          <div class="col-lg-6" id="container-chart-nature-deplacement" style="height: 390px;">
+
+          </div>
+        </div>
+
+        <div class="row mx-1 my-4 d-flex justify-content-center">
+          <div>
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body body-convertisseur" (click)="gotoLinkConversion()">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase title-conversion mb-0">Convertisseur CO2 de l'Ademe</h5>
+                    <p class="mt-1 mb-0 text-muted text-sm">
+                      <span>Transformer en objets palpables, les émissions carbone de mes trajets</span>
+                    </p>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape text-white rounded-circle shadow" style="background-color:#76a82f;">
+                      <i class="fas fa-exchange-alt"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="card mb-2 bg-secondary shadow">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col-12 text-center">
+            <h3 class="mb-0">Passez à l'action</h3>
+          </div>
+          <!-- <div class="col-4 text-right">
+            <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+          </div> -->
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class=" col-lg-6 card mb-2" style="background-color: #f1f1f1;">
+            <div class="card-body d-flex justify-content-center">
+              <h3>Comment réduire mon empreinte?</h3>
+            </div>
+
+          </div>
+          <div class=" col-lg-6 card mb-2" style="background-color: #f1f1f1;">
+            <div class="card-body d-flex justify-content-center">
+              <h3>Mes objectifs (n+1)</h3>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-2 bg-secondary shadow">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col-12 text-center">
+            <h3 class="mb-0">Partage de bonnes pratiques</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class=" pl-lg-4 row">
+          <label class="col-lg-12 form-control-label">Mes bonnes pratiques</label>
+          <div class="col-lg-12 d-flex justify-content-start">
+            <label class="pr-3">Privilégier le train à l'avion </label>
+            <div style="margin-top: auto;
+                  margin-bottom: auto;    display: flex;">
+              <i class="mb-4 align-middle ni ni-fat-add" style="color: #2dce89;font-size: x-large;cursor:pointer
+                    "></i>
+              <label style="color: #2dce89;cursor:pointer">Ajouter</label>
+              <i class=" mb-4 pt-1 mx-2 align-middle fas fa-share-alt" style="font-size: medium;"></i>
+              <label>Partager à mes groupes</label>
+            </div>
+          </div>
+        </div>
+        <div class=" pl-lg-4 row">
+          <label class="col-lg-12 form-control-label">Bonnes pratiques suggérées</label>
+          <div class="col-lg-12 d-flex justify-content-start"></div>
+          <label class="pl-3 pr-3">Organiser des visioconférences </label>
+          <i class="far fa-thumbs-up"></i>
         </div>
       </div>
 
     </div>
-
 
 
   </div>
