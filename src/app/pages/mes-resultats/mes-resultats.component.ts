@@ -29,7 +29,8 @@ export class MesResultatsComponent implements OnInit {
         type: 'column'
       },
       title: {
-        text: 'Evolution annuelle par mode de transport'
+        text: 'Evolution annuelle par mode de transport',
+        verticalAlign: 'bottom',
       },
       xAxis: {
         categories: ['2017', '2018', '2019', '2020', '2021']
@@ -66,7 +67,8 @@ export class MesResultatsComponent implements OnInit {
         type: 'bar'
     },
     title: {
-        text: 'Résultats 2020: représentation par nature de déplacements'
+        text: 'Résultats 2020: représentation par nature de déplacements',
+        verticalAlign: 'bottom',
     },
     // subtitle: {
     //     text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
